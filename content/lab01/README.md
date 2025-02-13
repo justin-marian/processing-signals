@@ -65,9 +65,9 @@
 The provided images include a noisy image (**IR**) and two noise components (**R1** and **R2**).  
 The original image can be reconstructed using the formula:
 
-$$
-\text{IMG}_{\text{in}} = \frac{IR - 0.3 \cdot (R1 + R2)}{0.3}
-$$
+<div align="center">
+  <img src="https://latex.codecogs.com/png.latex?\large\color{White}\text{IMG}_{\text{in}}%20=%20\text{clip}(\text{IMG}_{\text{in}},%200,%201)" />
+</div>
 
 where:
 
@@ -77,9 +77,9 @@ where:
 
 To ensure valid pixel values, we apply:
 
-$$
-\text{IMG}_{\text{in}} = \text{clip}(\text{IMG}_{\text{in}}, 0, 1)
-$$
+<div align="center">
+  <img src="https://latex.codecogs.com/png.latex?\large\color{White}\text{IMG}_{\text{in}}%20=%20\text{clip}(\text{IMG}_{\text{in}},%200,%201)" />
+</div>
 
 which restricts pixel values within the **valid range** of **[0,1]**.
 
