@@ -1,4 +1,4 @@
-# 🚀 [Digital Signal Processing - Fourier Analysis, Filtering, and Modulation](https://ocw.cs.pub.ro/courses/ps/labs_python/06)
+# 🚀 [Fourier Analysis, Filtering, and Modulation](https://ocw.cs.pub.ro/courses/ps/labs_python/06)
 
 ---
 
