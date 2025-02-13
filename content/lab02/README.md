@@ -6,7 +6,7 @@
 
 - **Frequency Analysis:** Computing and analyzing signal frequencies using **FFT**.  
 - **Ramp & Step Functions:** Generating and modifying ramp and step signals with delays.  
-- **Complex Exponentials:** Understanding **$ e^{jt} $**, **$ e^{-jt} $**, and their relation to trigonometry.  
+- **Complex Exponentials:** Understanding **$e^{jt}$**, **$e^{-jt}$**, and their relation to trigonometry.  
 - **Control Systems:** Simulating feedback-based speed control mechanisms.  
 - **Visualization:** Graphing signal evolution, complex plane transformations, and feedback performance.  
 
@@ -35,8 +35,8 @@ $$
 
 where:
 
-- $ f_1 = 1600 $ Hz
-- $ f_2 = 1800 $ Hz
+- $f_1 = 1600$ Hz
+- $f_2 = 1800$ Hz
 
 To find the minimum transmission interval $ T $, we compute:
 
@@ -61,7 +61,7 @@ $$
 
 #### Ramp and Step Signal Construction
 
-The required signal is constructed using the ramp function $ r(i) $ and the unit step function $ u(i) $:
+The required signal is constructed using the ramp function $r(i)$ and the unit step function  $u(i)$:
 
 $$
 s(i) = r(i) - r(i-T) - T \cdot u(i-T)
@@ -69,10 +69,10 @@ $$
 
 where:
 
-- $ i $ is the discrete time index,
-- $ T $ is the delay,
-- $ r(i) $ is the ramp function,
-- $ u(i) $ is the unit step function.
+- $i$ is the discrete time index,
+- $T$ is the delay,
+- $r(i)$ is the ramp function,
+- $u(i)$ is the unit step function.
 
 <div align="center">
   <img src="img/combined_signals.png" alt="Combined Signals" width="600"/>
@@ -131,8 +131,8 @@ $$
 
 where:
 
--$ y(i) $ is the current speed,
--$ e(i) = x(i) - y(i) $ is the error between desired and actual speed.
+- $y(i)$ is the current speed,
+- $e(i) = x(i) - y(i) $ is the error between desired and actual speed.
 
 <div align="center">
   <img src="img/feedback.png" alt="Feedback System" width="600"/>
