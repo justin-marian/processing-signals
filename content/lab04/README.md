@@ -31,7 +31,7 @@
 | **Period of the Signal** | $T$ | The duration after which the signal repeats. |
 | **Fourier Series Representation** | $s_r(t) = \sum_{k=-\infty}^{\infty} c_k e^{j \frac{2\pi k t}{T}}$ | Represents a periodic signal as a sum of exponentials with different frequencies. |
 | **Fourier Coefficients Formula** | $c_k = \frac{1}{T} \int_0^T s(t) e^{-j \frac{2\pi k t}{T}} dt$ | Computes the contribution of each frequency component to the signal. |
-| **Fourier Coefficients - Rectangular Wave** | $c_k = \begin{cases} \frac{2A}{j \pi k}, & k \text{ odd} \\ 0, & k \text{ even} \end{cases}$ | Shows that only odd harmonics contribute, and the coefficient magnitude decreases with $k$. |
+| **Fourier Coefficients - Rectangular Wave** |  <p align="center"><img src="https://latex.codecogs.com/png.latex?\small\color{White} c_k%20=%20\begin{cases} \frac{2A}{j \pi k}, & k \text{ odd} \\ 0, & k \text{ even} \end{cases}" /></p> | Shows that only odd harmonics contribute, and the coefficient magnitude decreases with $k$. |
 
 ---
 
