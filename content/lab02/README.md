@@ -6,7 +6,7 @@
 
 - **Frequency Analysis:** Computing and analyzing signal frequencies using **FFT**.  
 - **Ramp & Step Functions:** Generating and modifying ramp and step signals with delays.  
-- **Complex Exponentials:** Understanding **$e^{jt}$**, **$e^{-jt}$**, and their relation to trigonometry.  
+- **Complex Exponentials:** Understanding **e^{jt}**, e^{-jt}, and their relation to trigonometry.  
 - **Control Systems:** Simulating feedback-based speed control mechanisms.  
 - **Visualization:** Graphing signal evolution, complex plane transformations, and feedback performance.  
 
@@ -35,8 +35,8 @@ $$
 
 where:
 
-- $f_1 = 1600$ Hz
-- $f_2 = 1800$ Hz
+- $f_1$ $=$ $1600$ Hz
+- $f_2$ $=$ $1800$ Hz
 
 To find the minimum transmission interval $ T $, we compute:
 
@@ -61,18 +61,18 @@ $$
 
 #### Ramp and Step Signal Construction
 
-The required signal is constructed using the ramp function $r(i)$ and the unit step function  $u(i)$:
+The required signal is constructed using the ramp function $r{(i)}$ and the unit step function  $u{(i)}$:
 
 $$
-s(i) = r(i) - r(i-T) - T \cdot u(i-T)
+s{(i)} = r{(i)} - r(i-T) - T \cdot u(i-T)
 $$
 
 where:
 
 - $i$ is the discrete time index,
 - $T$ is the delay,
-- $r(i)$ is the ramp function,
-- $u(i)$ is the unit step function.
+- $r_{(i)}$ is the ramp function,
+- $u_{(i)}$ is the unit step function.
 
 <div align="center">
   <img src="img/combined_signals.png" alt="Combined Signals" width="600"/>
@@ -82,7 +82,7 @@ where:
 
 ### ✅ Complex Exponentials & Trigonometric Identities  
 
-- Computes **$ e^{jt} $** and **$ e^{-jt} $** for discrete time values.  
+- Computes **$e^{jt}$** and **$e^{-jt}$** for discrete time values.  
 - Verifies **Euler’s identities** and **trigonometric relations**.  
 - Plots results in the **complex plane**.  
 - **Visualization:**  
@@ -109,30 +109,30 @@ $$
 
 - Simulates a car’s speed **reaching a desired value** using a feedback loop.  
 - Implements a **decision-based control system**:  
-  - If the error **$ e(i) > 10 $** → Increase speed by **5**.  
-  - If the error **$ 0 < e(i) \leq 10 $** → Increase speed by **1**.  
-  - If the error **$ e(i) = 0 $** → Maintain speed.  
+  - If the error **$e{(i)} > 10 $** → Increase speed by **5**.  
+  - If the error **$0 < e{(i)} \leq 10$** → Increase speed by **1**.  
+  - If the error **$e{(i)} = 0$** → Maintain speed.  
 - **Visualization:**  
   - Plots the car’s speed evolution over time.  
   - Highlights error reduction as the feedback system adjusts speed.  
 
 #### Feedback Control System Equations
 
-The speed control is based on the error term$ e(i) $:
+The speed control is based on the error term:
 
 $$
 y(i+1) =
-\begin{cases} 
-y(i) + 5, & \text{if } e(i) > 10 \\ 
-y(i) + 1, & \text{if } 0 < e(i) \leq 10 \\ 
-y(i), & \text{if } e(i) = 0 
+\begin{cases}
+y{(i)} + 5, & \text{if } e{(i)} > 10 \\
+y{(i)} + 1, & \text{if } 0 < e{(i)} \leq 10 \\
+y{(i)}, & \text{if } e{(i)} = 0
 \end{cases}
 $$
 
 where:
 
-- $y(i)$ is the current speed,
-- $e(i) = x(i) - y(i) $ is the error between desired and actual speed.
+- $y{(i)}$ is the current speed,
+- $e{(i)}$ $=$ $x{(i)}$ $-$ $y{(i)}$ is the error between desired and actual speed.
 
 <div align="center">
   <img src="img/feedback.png" alt="Feedback System" width="600"/>
