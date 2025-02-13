@@ -4,20 +4,19 @@
 
 ## 📌 Signal Processing (SP) Labs  
 
-This repository contains structured **Signal Processing (SP) labs**, covering a range of fundamental and advanced topics in **signal processing (SP)**.
-
+This repository contains structured **Signal Processing (SP) labs**:
 The labs focus on key concepts such as:  
 
 - **Fourier Analysis:** Understanding frequency-domain representations of signals.  
-- **DFT / FFT:** Computing and visualizing the **Discrete Fourier Transform (DFT)** and its fast implementation **Fast Fourier Transform (FFT)**.  
-- **Signal Filtering:** Implementing **low-pass, high-pass, band-pass FIR & IIR filters** to remove noise and extract useful components.  
+- **DFT / FFT:** Computing and visualizing the **Discrete Fourier Transform (DFT)** and **Fast Fourier Transform (FFT)**.  
+- **Signal Filtering:** Implementing **low-pass, high-pass, band-pass FIR & IIR filters** to remove noise and extract useful components from the original signal.  
 - **Convolution:** Applying convolution in **time-domain and frequency-domain** for system analysis and filtering.  
-- **Windowing Methods:** Reducing spectral leakage using **Hanning, Hamming, Blackman** windows in filtering applications.  
+- **Windowing Methods:** Reducing spectral leakage using **Hanning, Hamming, Blackman** windows.  
 - **Modulation Techniques:** Understanding and implementing **Amplitude Modulation (AM), Frequency Modulation (FM), and Phase Modulation (PM)** for communication systems.  
 - **Spectral Leakage & Zero-Padding:** Investigating how **signal truncation** affects frequency domain analysis and how **zero-padding** improves resolution.  
 - **FM Signal Processing with RTL-SDR:** Capturing, demodulating, and analyzing **real-world FM signals** using **Software Defined Radio (SDR)** techniques.  
 - **Time & Frequency Shifting:** Learning how signals transform when shifted in **time and phase**.  
-- **Digital Filtering in Python:** Designing **Butterworth, Chebyshev, and Kaiser filters** using **SciPy** for practical signal processing applications.  
+- **Digital Filtering in Python:** Designing **Butterworth, Chebyshev, and Kaiser filters** using **SciPy**.  
 
 ---
 
@@ -68,6 +67,7 @@ In `lab06`, we analyze:
 
 ```bash
 cd lab06/src
+python ex2.py
 ```
 
 ---
