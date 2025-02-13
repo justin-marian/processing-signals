@@ -12,7 +12,7 @@
 
 ---
 
-## 🛠️ Key Concepts  
+## 🛠️ Key Concepts
 
 ---
 
@@ -29,20 +29,20 @@
 
 The transmitted signal consists of a sum of two sinusoids:
 
-<div align="center">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} x(t) = A_1 \cdot \sin(2 \pi f_1 t) + A_2 \cdot \sin(2 \pi f_2 t)" />
-</div>
+$$
+x(t) = A_1 \cdot \sin(2 \pi f_1 t) + A_2 \cdot \sin(2 \pi f_2 t)
+$$
 
 where:
 
--$ f_1 = 1600 $ Hz
--$ f_2 = 1800 $ Hz
+- $ f_1 = 1600 $ Hz
+- $ f_2 = 1800 $ Hz
 
-To find the minimum transmission interval$ T $, we compute:
+To find the minimum transmission interval $ T $, we compute:
 
-<div align="center">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} T = \frac{1}{\gcd(f_1, f_2)}" />
-</div>
+$$
+T = \frac{1}{\gcd(f_1, f_2)}
+$$
 
 <div align="center">
   <img src="img/semnal_modem.png" alt="Semnal Modem" width="600"/>
@@ -61,18 +61,18 @@ To find the minimum transmission interval$ T $, we compute:
 
 #### Ramp and Step Signal Construction
 
-The required signal is constructed using the ramp function$ r(i) $ and the unit step function$ u(i) $:
+The required signal is constructed using the ramp function $ r(i) $ and the unit step function $ u(i) $:
 
-<div align="center">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} s(i) = r(i) - r(i-T) - T \cdot u(i-T)" />
-</div>
+$$
+s(i) = r(i) - r(i-T) - T \cdot u(i-T)
+$$
 
 where:
 
--$ i $ is the discrete time index,
--$ T $ is the delay,
--$ r(i) $ is the ramp function,
--$ u(i) $ is the unit step function.
+- $ i $ is the discrete time index,
+- $ T $ is the delay,
+- $ r(i) $ is the ramp function,
+- $ u(i) $ is the unit step function.
 
 <div align="center">
   <img src="img/combined_signals.png" alt="Combined Signals" width="600"/>
@@ -91,17 +91,17 @@ where:
 
 #### Euler’s Identity and Complex Exponentials
 
-<div align="left">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} e^{jt} = \cos(t) + j \sin(t)" />
-</div>
+$$
+e^{jt} = \cos(t) + j \sin(t)
+$$
 
-<div align="left">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} e^{-jt} = \cos(t) - j \sin(t)" />
-</div>
+$$
+e^{-jt} = \cos(t) - j \sin(t)
+$$
 
-<div align="left">
-  <img src="https://latex.codecogs.com/png.latex?\large\color{White} \cos(t) = \frac{e^{jt} + e^{-jt}}{2}" />
-</div>
+$$
+\cos(t) = \frac{e^{jt} + e^{-jt}}{2}
+$$
 
 ---
 
@@ -109,9 +109,9 @@ where:
 
 - Simulates a car’s speed **reaching a desired value** using a feedback loop.  
 - Implements a **decision-based control system**:  
-  - If the error **\( e(i) > 10 $** → Increase speed by **5**.  
-  - If the error **\( 0 < e(i) \leq 10 $** → Increase speed by **1**.  
-  - If the error **\( e(i) = 0 $** → Maintain speed.  
+  - If the error **$ e(i) > 10 $** → Increase speed by **5**.  
+  - If the error **$ 0 < e(i) \leq 10 $** → Increase speed by **1**.  
+  - If the error **$ e(i) = 0 $** → Maintain speed.  
 - **Visualization:**  
   - Plots the car’s speed evolution over time.  
   - Highlights error reduction as the feedback system adjusts speed.  
