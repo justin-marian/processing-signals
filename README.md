@@ -1,10 +1,10 @@
-# ˒﹚) [Signal Processing](https://ocw.cs.pub.ro/courses/ps)
+# ˒﹚) [Processing Signals](https://ocw.cs.pub.ro/courses/ps)
 
 ---
 
-## 📌 Signal Processing (SP) Labs  
+## 📌 Processing Signals (PS) Labs  
 
-This repository contains structured **Signal Processing (SP) labs**:
+This repository contains structured **Processing Signals (PS) labs**:
 The labs focus on key concepts such as:  
 
 - **Fourier Analysis:** Understanding frequency-domain representations of signals.  
