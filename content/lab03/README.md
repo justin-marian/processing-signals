@@ -45,10 +45,10 @@
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:--------------------------:|:---------------:|
-| **Error between original and reconstructed signal** | $ \epsilon_N (t) = s(t) - s_N (t) $ | Measures the difference between the actual and approximated signal. |
-| **Fourier Series Approximation using $ N $ terms** | $$ s_N (t) = \sum\limits_{k=-N}^{N} c_k e^{j \frac{2\pi k t}{T}} $$ | Uses only the first $ N $ terms for signal reconstruction. |
-| **RMS Error Formula** | $$ \text{rms} \epsilon_N = \sqrt{ 2 \sum\limits_{k=N}^{\infty} \|c_k\|^2 } $$ | Represents the energy of the truncated Fourier coefficients. |
-| **Error expressed using all coefficients** | $$ \text{rms} (\epsilon_{N-1}) = \sqrt{ \sum\limits_{k=-\infty}^{\infty} \left\| c_k \right\|^2 - \left( 2 \sum\limits_{k=1}^{N} \left\| c_k \right\|^2 + \left\| c_0 \right\|^2 \right) } $$ | Analyzes how error decreases as $ N $ increases. |
+| **Error between original and reconstructed signal** | $\epsilon_N (t) = s(t) - s_N (t)$ | Measures the difference between the actual and approximated signal. |
+| **Fourier Series Approximation using $ N $ terms** | $s_N (t) = \sum\limits_{k=-N}^{N} c_k e^{j \frac{2\pi k t}{T}}$ | Uses only the first $ N $ terms for signal reconstruction. |
+| **RMS Error Formula** | $\text{rms} \epsilon_N = \sqrt{ 2 \sum\limits_{k=N}^{\infty} \|c_k\|^2 }$ | Represents the energy of the truncated Fourier coefficients. |
+| **Error expressed using all coefficients** | $\text{rms} (\epsilon_{N-1}) = \sqrt{ \sum\limits_{k=-\infty}^{\infty} \left\| c_k \right\|^2 - \left( 2 \sum\limits_{k=1}^{N} \left\| c_k \right\|^2 + \left\| c_0 \right\|^2 \right) }$ | Analyzes how error decreases as $ N $ increases. |
 
 ---
 
@@ -56,15 +56,15 @@
 
 - Implements **DFT (Discrete Fourier Transform)** to compute frequency components.  
 - Implements **IDFT (Inverse DFT)** for signal reconstruction.  
-- Supports variable **$ k_{\max} $** to control reconstruction quality.  
+- Supports variable **$k_{\max}$** to control reconstruction quality.  
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:-------------------------:|:---------------:|
-| **Discrete Fourier Transform (DFT)** | $$ X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi k n}{N}} $$ | Converts a discrete-time signal into its frequency-domain representation. |
-| **Frequency-domain coefficients** | $ X[k] $ | Represents the amplitude and phase of frequency components. |
+| **Discrete Fourier Transform (DFT)** | $X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi k n}{N}}$ | Converts a discrete-time signal into its frequency-domain representation. |
+| **Frequency-domain coefficients** | $X[k]$ | Represents the amplitude and phase of frequency components. |
 | **Number of samples** | $ N $ | The total number of discrete points in the signal. |
-| **Inverse Discrete Fourier Transform (IDFT)** | $$ x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{j \frac{2\pi k n}{N}} $$ | Reconstructs the original time-domain signal from its frequency representation. |
-| **Reconstruction control** | $ k_{\max} $ | Controls the quality of reconstruction by limiting frequency terms. |
+| **Inverse Discrete Fourier Transform (IDFT)** | $x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{j \frac{2\pi k n}{N}}$ | Reconstructs the original time-domain signal from its frequency representation. |
+| **Reconstruction control** | $k_{\max}$ | Controls the quality of reconstruction by limiting frequency terms. |
 
 ---
 
@@ -73,9 +73,9 @@
 - Encodes a **random binary sequence** into a sinusoidal waveform.  
 - Uses frequency mapping:  
   - **00** → **No signal**  
-  - **01** → **$ \sin(2\pi f_1 t) $**  
-  - **10** → **$ \sin(2\pi f_2 t) $**  
-  - **11** → **Combination of $ f_1 $ and $ f_2 $**.  
+  - **01** → **$\sin{(2\pi f_1 t)}$**  
+  - **10** → **$\sin{(2\pi f_2 t)}$**  
+  - **11** → **Combination of $f_1$ and $f_2$**.  
 - **Visualization:**  
   - Plots the encoded signal with time-domain analysis.  
 
@@ -83,7 +83,7 @@
 
 ## 📊 Results  
 
-- Increasing **$ k_{\max} $** improves signal reconstruction.  
+- Increasing **$k_{\max}$** improves signal reconstruction.  
 - **RMS Error** decreases with more Fourier terms.  
 - **Signal encoding successfully maps digital sequences to sinusoidal waves.**  
 - **DFT & IDFT provide accurate spectral and time-domain representations.**  
