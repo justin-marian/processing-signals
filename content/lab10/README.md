@@ -35,15 +35,11 @@ Below is an example of FIR and IIR filter response:
 
 The **Discrete Fourier Transform (DFT)** is given by:
 
-\[
-X(k) = \sum_{n=0}^{N-1} x(n) e^{-j2\pi kn/N}
-\]
+$$X(k) = \sum_{n=0}^{N-1} x(n) e^{-j2\pi kn/N}$$
 
 The **Inverse DFT (IDFT)** is given by:
 
-\[
-x(n) = \frac{1}{N} \sum_{k=0}^{N-1} X(k) e^{j2\pi kn/N}
-\]
+$$x(n) = \frac{1}{N} \sum_{k=0}^{N-1} X(k) e^{j2\pi kn/N}$$
 
 - Computes Fourier coefficients for a **rectangular signal**.  
 - Implements **DFT (Discrete Fourier Transform)** and **Inverse DFT (IDFT)** for spectral analysis.  
@@ -59,18 +55,16 @@ x(n) = \frac{1}{N} \sum_{k=0}^{N-1} X(k) e^{j2\pi kn/N}
 
 ### 🔹 Convolution  
 
-The convolution operation between two sequences \( h(k) \) and \( x(n) \) is defined as:
+The convolution operation between two sequences $h(k)$ and $x(n)$ is defined as:
 
-\[
-y(n) = h(k) * x(n) = \sum_{k=0}^{M-1} h(k) \cdot x(n - k)
-\]
+$$y(n) = h(k) * x(n) = \sum_{k=0}^{M-1} h(k) \cdot x(n - k)$$
 
-where \( M \) is the length of sequence \( h(k) \).
+where $M$ is the length of sequence $h(k)$.
 
-Convolution defines a single output element \( y(n) \), and for the next element \( y(n+1) \), we shift \( h(k) \) accordingly.
+Convolution defines a single output element $y(n)$, and for the next element $y(n+1)$, we shift $h(k)$ accordingly.
 
 - **Example:**
-  - If \( x(n) \) has \( N \) elements and \( h(k) \) has \( M \) elements, the convolved sequence has \( N + M - 1 \) elements.
+  - If $x(n)$ has $N$ elements and $h(k)$ has $M$ elements, the convolved sequence has $N + M - 1$ elements.
 
 ---
 
@@ -78,15 +72,11 @@ Convolution defines a single output element \( y(n) \), and for the next element
 
 An FIR filter applies a linear convolution over input signals using a **finite number of coefficients**:
 
-\[
-y(n) = b_0 \cdot x(n) + b_1 \cdot x(n-1) + \dots + b_q \cdot x(n-q)
-\]
+$$y(n) = b_0 \cdot x(n) + b_1 \cdot x(n-1) + \dots + b_q \cdot x(n-q)$$
 
 The **Transfer Function** of the FIR filter in the Z-domain is:
 
-\[
-H(z) = \sum_{k=0}^{q} b_k z^{-k}
-\]
+$$H(z) = \sum_{k=0}^{q} b_k z^{-k}$$
 
 ---
 
@@ -94,15 +84,11 @@ H(z) = \sum_{k=0}^{q} b_k z^{-k}
 
 An **IIR filter** includes feedback terms and follows the difference equation:
 
-\[
-y(n) = b_0 \cdot x(n) + b_1 \cdot x(n-1) + \dots + b_q \cdot x(n-q) + a_1 \cdot y(n-1) + \dots + a_p \cdot y(n-p)
-\]
+$$y(n) = b_0 \cdot x(n) + b_1 \cdot x(n-1) + \dots + b_q \cdot x(n-q) + a_1 \cdot y(n-1) + \dots + a_p \cdot y(n-p)$$
 
 The **Transfer Function** in the Z-domain is:
 
-\[
-H(z) = \frac{\sum_{k=0}^{q} b_k z^{-k}}{1 - \sum_{k=1}^{p} a_k z^{-k}}
-\]
+$$H(z) = \frac{\sum_{k=0}^{q} b_k z^{-k}}{1 - \sum_{k=1}^{p} a_k z^{-k}}$$
 
 ---
 
@@ -111,11 +97,9 @@ H(z) = \frac{\sum_{k=0}^{q} b_k z^{-k}}{1 - \sum_{k=1}^{p} a_k z^{-k}}
 - Uses **window functions** to smooth the impulse response and reduce side lobes.  
 - Implements **Blackman windowing** to refine filter characteristics.  
 
-\[
-h(n) = h_{\text{ideal}}(n) \cdot w(n)
-\]
+$$h(n) = h_{\text{ideal}}(n) \cdot w(n)$$
 
-where \( w(n) \) is a **Blackman window** or another smoothing function.  
+where $w(n)$ is a **Blackman window** or another smoothing function.  
 
 ---
 
@@ -124,13 +108,11 @@ where \( w(n) \) is a **Blackman window** or another smoothing function.
 - Designs **Butterworth filters** for maximally flat frequency response.  
 - Implements **Chebyshev Type I filters** for steeper roll-off characteristics.  
 
-A **Butterworth low-pass filter** of order \( N \) has the frequency response:
+A **Butterworth low-pass filter** of order $N$ has the frequency response:
 
-\[
-H(j\omega) = \frac{1}{\sqrt{1 + \left(\frac{\omega}{\omega_c}\right)^{2N}}}
-\]
+$$H(j\omega) = \frac{1}{\sqrt{1 + \left(\frac{\omega}{\omega_c}\right)^{2N}}}$$
 
-where \( \omega_c \) is the cutoff frequency.  
+where $\omega_c$ is the cutoff frequency.  
 
 ---
 
@@ -139,11 +121,9 @@ where \( \omega_c \) is the cutoff frequency.
 - Tests filtering on **sinusoidal signals** at various frequencies.  
 - Demonstrates **band-pass and high-pass filtering** on test signals.  
 
-\[
-x_{\text{filtered}}(n) = h(n) * x(n)
-\]
+$$x_{\text{filtered}}(n) = h(n) * x(n)$$
 
-where \( h(n) \) is the impulse response of the filter.
+where $h(n)$ is the impulse response of the filter.
 
 ---
 
