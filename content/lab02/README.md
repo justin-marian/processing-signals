@@ -6,7 +6,7 @@
 
 - **Frequency Analysis:** Computing and analyzing signal frequencies using **FFT**.  
 - **Ramp & Step Functions:** Generating and modifying ramp and step signals with delays.  
-- **Complex Exponentials:** Understanding **e^{jt}**, e^{-jt}, and their relation to trigonometry.  
+- **Complex Exponentials:** Understanding **$e^{jt}$**, **$e^{-jt}$**, and their relation to trigonometry.  
 - **Control Systems:** Simulating feedback-based speed control mechanisms.  
 - **Visualization:** Graphing signal evolution, complex plane transformations, and feedback performance.  
 
@@ -71,8 +71,8 @@ where:
 
 - $i$ is the discrete time index,
 - $T$ is the delay,
-- $r_{(i)}$ is the ramp function,
-- $u_{(i)}$ is the unit step function.
+- $r{(i)}$ is the ramp function,
+- $u{(i)}$ is the unit step function.
 
 <div align="center">
   <img src="img/combined_signals.png" alt="Combined Signals" width="600"/>
