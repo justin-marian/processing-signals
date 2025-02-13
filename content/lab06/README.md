@@ -29,8 +29,8 @@
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:-------------------------:|:---------------:|
-| **Discrete Fourier Transform (DFT)** | \( S(k) = \sum\limits_{n=0}^{N-1} s(n) e^{-j \frac{2\pi nk}{K}} \) | Converts a discrete-time signal into its frequency-domain representation. |
-| **Inverse Discrete Fourier Transform (IDFT)** | \( s(n) = \frac{1}{K} \sum\limits_{k=0}^{K-1} S(k) e^{j \frac{2\pi nk}{K}} \) | Reconstructs the original signal from frequency components. |
+| **Discrete Fourier Transform (DFT)** | $S(k) = \sum\limits_{n=0}^{N-1} s(n) e^{-j \frac{2\pi nk}{K}}$ | Converts a discrete-time signal into its frequency-domain representation. |
+| **Inverse Discrete Fourier Transform (IDFT)** | $s(n) = \frac{1}{K} \sum\limits_{k=0}^{K-1} S(k) e^{j \frac{2\pi nk}{K}}$ | Reconstructs the original signal from frequency components. |
 
 ---
 
@@ -45,8 +45,8 @@
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:-------------------------:|:---------------:|
-| **Signal Power Calculation** | \( \text{P} = \frac{1}{N} \sum\limits_{k=0}^{N-1} \|S(k)\|^2 \) | Computes the power of the signal components. |
-| **Signal-to-Noise Ratio (SNR)** | \( \text{SNR} = 10 \log_{10} \left(\frac{P_{\text{signal}}}{P_{\text{noise}}}\right) \) | Measures the quality of the signal by comparing useful information to noise. |
+| **Signal Power Calculation** | $\text{P} = \frac{1}{N} \sum\limits_{k=0}^{N-1} \|S(k)\|^2$ | Computes the power of the signal components. |
+| **Signal-to-Noise Ratio (SNR)** | $\text{SNR} = 10 \log_{10} \left(\frac{P_{\text{signal}}}{P_{\text{noise}}}\right)$ | Measures the quality of the signal by comparing useful information to noise. |
 ---
 
 ### 📌 Noisy Signal Analysis
@@ -111,10 +111,9 @@
 | ![Original Image](output/imagine_originala.png) | ![Low-Pass Filter](output/imagine_low_pass.png) | ![High-Pass Filter](output/imagine_high_pass.png) |
 | **The original grayscale image.** Serves as input for Fourier-based filtering. | **Blurs high-frequency details.** Retains only smooth variations in intensity. | **Enhances edges and sharp features.** Suppresses low-frequency content. |
 
-
 ---
 
-### 🔥 Key Observations  
+### 🔥 Key Observations
 
 - **DFT efficiently decomposes signals into frequency components.**  
 - **FFT significantly improves spectral computation speed.**  
