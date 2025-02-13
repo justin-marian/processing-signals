@@ -65,7 +65,7 @@
 The provided images include a noisy image (**IR**) and two noise components (**R1** and **R2**).  
 The original image can be reconstructed using the formula:
 
-$ \text{IMG}_{\text{in}} = \frac{IR - 0.3 \cdot (R1 + R2)}{0.3} $  
+$\text{IMG}_{\text{in}} = \frac{IR - 0.3 \cdot (R1 + R2)}{0.3}$  
 
 where:
 
@@ -75,7 +75,7 @@ where:
 
 To ensure valid pixel values, we apply:
 
-$ \text{IMG}_{\text{in}} = \text{clip}(\text{IMG}_{\text{in}}, 0, 1) $  
+$\text{IMG}_{\text{in}} = \text{clip}(\text{IMG}_{\text{in}}, 0, 1)$  
 
 which restricts pixel values within the **valid range** of **[0,1]**.
 
