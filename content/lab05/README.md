@@ -26,7 +26,7 @@
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:-------------------------:|:---------------:|
-| **Moving Average Filter** |$y(n) = \frac{1}{M} \sum_{i=0}^{M-1} x(n-i)$| Computes the average of the last$M$samples to smooth the signal. |
+| **Moving Average Filter** |$y(n) = \frac{1}{M} \sum_{i=0}^{M-1} x(n-i)$| Computes the average of the last $M$ samples to smooth the signal. |
 
 - **Steps to Implement:**
   - Generate sinusoidal signals with different frequencies (`1`, `2`, `10`, `20`, `100` Hz).
@@ -78,9 +78,9 @@
 
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:-------------------------:|:---------------:|
-| **Exponential Decay Signal** |$s(t) = e^{-a t} u(t)$| Models a decaying signal where$a > 0$controls decay rate, and$u(t)$is the unit step function. |
-| **Fourier Transform of Signal** |$S(k) = \sum_{n=0}^{N-1} s(n) e^{-j \frac{2\pi nk}{K}}$| Computes the frequency representation of$s(t)$using DFT. |
-| **Amplitude Modulation** |$x(t) = (1 + s(t)) \cdot \cos(2\pi f_c t)$| Modulates the signal by multiplying it with a cosine carrier of frequency$f_c$. |
+| **Exponential Decay Signal** |$s(t) = e^{-a t} u(t)$| Models a decaying signal where $a$ $>$ $0$ controls decay rate, and $u(t)$ is the unit step function. |
+| **Fourier Transform of Signal** |$S(k) = \sum_{n=0}^{N-1} s(n) e^{-j \frac{2\pi nk}{K}}$| Computes the frequency representation of $s(t)$ using DFT. |
+| **Amplitude Modulation** |$x(t) = (1 + s(t)) \cdot \cos(2\pi f_c t)$| Modulates the signal by multiplying it with a cosine carrier of frequency $f_c$. |
 
 ---
 
