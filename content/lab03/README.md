@@ -29,9 +29,9 @@
 |:----------:|:-------------------------:|:---------------:|
 | **Amplitude of the Signal** | $A$ | The maximum magnitude of the signal, determining its peak value. |
 | **Period of the Signal** | $T$ | The duration after which the signal repeats. |
-| **Fourier Series Representation** | $s(t) = \sum_{k=-\infty}^{\infty} c_k e^{j \frac{2\pi k t}{T}}$ | Represents a periodic signal as a sum of exponentials with different frequencies. |
+| **Fourier Series Representation** | $s(t) = \sum\limits_{k=-\infty}^{\infty} c_k e^{j \frac{2\pi k t}{T}}$ | Represents a periodic signal as a sum of exponentials with different frequencies. |
 | **Fourier Coefficients Formula** | $c_k = \frac{1}{T} \int_0^T s(t) e^{-j \frac{2\pi k t}{T}} dt$ | Computes the contribution of each frequency component to the signal. |
-| **Fourier Coefficients - Rectangular Wave** | $c_k = \begin{cases} \frac{2A}{j \pi k}, & k \text{ odd} \\ 0, & k \text{ even} \end{cases}$ | Shows that only odd harmonics contribute, and the coefficient magnitude decreases with $k$. |
+| **Fourier Coefficients - Rectangular Wave** | <p align="center"><img src="https://latex.codecogs.com/png.latex?\large\color{White} c_k%20=%20\begin{cases} \frac{2A}{j \pi k}, & k \text{ odd} \\ 0, & k \text{ even} \end{cases}" /></p> | Shows that only odd harmonics contribute, and the coefficient magnitude decreases with $k$. |
 
 ---
 
@@ -46,7 +46,7 @@
 | **Concept** | **Mathematical Expression** | **Explanation** |
 |:----------:|:--------------------------:|:---------------:|
 | **Error between original and reconstructed signal** | $\epsilon_N (t) = s(t) - s_N (t)$ | Measures the difference between the actual and approximated signal. |
-| **Fourier Series Approximation using $ N $ terms** | $s_N (t) = \sum\limits_{k=-N}^{N} c_k e^{j \frac{2\pi k t}{T}}$ | Uses only the first $N$ terms for signal reconstruction. |
+| **Fourier Series Approximation using $N$ terms** | $s_N (t) = \sum\limits_{k=-N}^{N} c_k e^{j \frac{2\pi k t}{T}}$ | Uses only the first $N$ terms for signal reconstruction. |
 | **RMS Error Formula** | $\text{rms} \epsilon_N = \sqrt{ 2 \sum\limits_{k=N}^{\infty} \|c_k\|^2 }$ | Represents the energy of the truncated Fourier coefficients. |
 | **Error expressed using all coefficients** | $\text{rms} (\epsilon_{N-1}) = \sqrt{ \sum\limits_{k=-\infty}^{\infty} \left\| c_k \right\|^2 - \left( 2 \sum\limits_{k=1}^{N} \left\| c_k \right\|^2 + \left\| c_0 \right\|^2 \right) }$ | Analyzes how error decreases as $N$ increases. |
 
